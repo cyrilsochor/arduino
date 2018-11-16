@@ -13,6 +13,12 @@ OneWire oneWireDS(7); // 7 cislo pinu teplotniho cidla
 // vytvoření instance senzoryDS z knihovny DallasTemperature
 DallasTemperature senzoryDS(&oneWireDS);
 
+// pripojeni dispeje:
+// GND - GND - modry 
+// VCS - 5V - zeleny
+// SCL - SCL - zluty 
+// SDA - SDA - oranzovy 
+
 byte second, minute, hour, dayOfWeek, dayOfMonth, month, year;
 
 // small oled variables
@@ -37,7 +43,7 @@ void setup(){
     
     // set the initial time here:
     // DS3231     ss,mm,HH,dw,dd,MM,YY
-    //setDS3231time(00,42,06,04,04,05,17);
+    //setDS3231time(00,46,10,06,10,11,18);
 }
 
 void setupClock(){
