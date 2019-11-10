@@ -1,5 +1,6 @@
 // see https://arduino.cz/tutorial-uzivani-hodin-realneho-casu-ds1307-a-ds3231-s-arduinem/
 
+// BOARD: ATmega 2560
 #include <SPI.h> // required for small oled
 #include "Wire.h" // required for clock module
 #include <OneWire.h> // temp sensor DS18B20
@@ -211,4 +212,3 @@ byte decToBcd(byte val){
 byte bcdToDec(byte val){
     return( (val/16*10) + (val%16) );
 }
-
